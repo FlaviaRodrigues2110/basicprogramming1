@@ -21,7 +21,19 @@ public class NumberPyramidWithTwist {
            }
            System.out.println();
        }
-
+    System.out.println(sumFirstAndLastDigit(9,9));
    }
 
+
+    public static boolean sumFirstAndLastDigit(int number1, int number2) {
+        if(number1<10 || number1>99 && number2<10 || number2>99) return false;
+
+        if((number1/10 == number2/10) ||
+                (number1%10 == number2/10) ||
+                (number1/10==number2%10) ||
+                (number1%10== number2%10))
+        return true;
+
+        return false;
+    }
 }
